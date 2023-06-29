@@ -1,0 +1,17 @@
+.mainKey {
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: 0px 5px hsl(28, 15%, 65%);
+  color: hsl(221, 14%, 31%)
+}
+
+.funcKey {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0px 5px hsl(224, 28%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+
+.eqKey {
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0px 5px hsl(6, 70%, 34%);
+  color: hsl(0, 0%, 100%);
+}

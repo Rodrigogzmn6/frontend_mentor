@@ -1,0 +1,8 @@
+.App {
+  background-color: var(--d-main-bg);
+  color: var(--d-light-txt);
+}
+
+.dark {
+  background-color: red;
+}
