@@ -2,24 +2,47 @@ import { Radio } from "@mui/material";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
 import "./ThemeSelector.css";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export const ThemeSelector = () => {
   const { theme, changeTheme } = useContext(ThemeContext);
+  const [{ cbColor, checkedColor }, setColors] = useState({
+    cbColor: "hsl(223 31% 20%)",
+    checkedColor: "hsl(6 63% 50%)",
+  });
 
   const handleClick = (event) => {
     changeTheme(event.target.value);
   };
 
+  useEffect(() => {
+    if (theme === "dark") {
+      setColors({
+        cbColor: "hsl(223 31% 20%)",
+        checkedColor: "hsl(6 63% 50%)",
+      });
+    } else if (theme === "light") {
+      setColors({
+        cbColor: "hsl(0 5% 81%)",
+        checkedColor: "hsl(25 98% 40%)",
+      });
+    } else if (theme === "accent") {
+      setColors({
+        cbColor: "hsl(268 71% 12%)",
+        checkedColor: "hsl(176 100% 44%)",
+      });
+    }
+  }, [theme]);
+
   return (
-    <div className="flex items-center gap-6">
+    <div className={`theme-selector  flex items-center gap-6`}>
       <h3 className="text-base">THEME</h3>
-      <div className="themeSelectorRadioGroup bg-d-screen-bg rounded-full px-2">
+      <div className={`radio-group ${theme} rounded-full px-2`}>
         <Radio
           sx={{
-            color: "hsl(224 36% 15%)",
+            color: cbColor,
             "&.Mui-checked": {
-              color: "hsl(6 63% 50%)",
+              color: checkedColor,
             },
             margin: "0px",
             padding: "0px",
@@ -30,9 +53,9 @@ export const ThemeSelector = () => {
         />
         <Radio
           sx={{
-            color: "hsl(224 36% 15%)",
+            color: cbColor,
             "&.Mui-checked": {
-              color: "hsl(6 63% 50%)",
+              color: checkedColor,
             },
             margin: "0px",
             padding: "0px",
@@ -43,9 +66,9 @@ export const ThemeSelector = () => {
         />
         <Radio
           sx={{
-            color: "hsl(224 36% 15%)",
+            color: cbColor,
             "&.Mui-checked": {
-              color: "hsl(6 63% 50%)",
+              color: checkedColor,
             },
             margin: "0px",
             padding: "0px",

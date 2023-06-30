@@ -1,4 +1,7 @@
+import { useContext } from "react";
 import { KeyButton } from "../KeyButton/KeyButton";
+import { ThemeContext } from "../../contexts/ThemeContext";
+import "./KeyPad.css";
 
 export const KeyPad = ({
   onNumberPressed,
@@ -8,8 +11,9 @@ export const KeyPad = ({
   onResetPressed,
   onEqualsPressed,
 }) => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className="bg-d-keypad-bg gap-4 flex flex-col p-6 rounded-xl">
+    <div className={`key-pad ${theme} gap-4 flex flex-col p-6 rounded-xl`}>
       <div className="gap-4 grid grid-cols-[1fr_1fr_1fr_1fr]">
         <KeyButton
           value={"7"}

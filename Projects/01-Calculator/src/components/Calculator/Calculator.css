@@ -1,0 +1,26 @@
+.application.dark {
+  background-color: var(--d-main-bg);
+  color: var(--d-light-txt);
+}
+
+.application.light {
+  background-color: var(--l-main-bg);
+  color: var(--l-dark-txt);
+}
+
+.application.accent {
+  background-color: var(--a-main-bg);
+  color: var(--a-light-txt);
+}
+
+.calculator.dark {
+  background-color: var(--d-main-bg);
+}
+
+.calculator.light {
+  background-color: var(--l-main-bg);
+}
+
+.calculator.accent {
+  background-color: var(--a-main-bg);
+}

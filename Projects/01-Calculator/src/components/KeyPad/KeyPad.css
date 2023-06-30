@@ -1,11 +1,11 @@
-.theme-selector .radio-group.dark {
+.key-pad.dark {
   background-color: var(--d-keypad-bg);
 }
 
-.theme-selector .radio-group.light {
+.key-pad.light {
   background-color: var(--l-keypad-bg);
 }
 
-.theme-selector .radio-group.accent{
+.key-pad.accent {
   background-color: var(--a-keypad-bg);
 }

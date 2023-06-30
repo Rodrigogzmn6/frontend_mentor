@@ -1,0 +1,11 @@
+.calc-screen.dark{
+  background-color: var(--d-screen-bg);
+}
+
+.calc-screen.light{
+  background-color: var(--l-screen-bg);
+}
+
+.calc-screen.accent{
+  background-color: var(--a-screen-bg);
+}

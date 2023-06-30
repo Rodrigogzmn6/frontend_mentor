@@ -1,17 +1,53 @@
-.mainKey {
-  background-color: hsl(30, 25%, 89%);
-  box-shadow: 0px 5px hsl(28, 15%, 65%);
-  color: hsl(221, 14%, 31%)
+.mainKey.dark {
+  background-color: var(--d-main-key);
+  box-shadow: 0px 5px var(--d-main-sh-key);
+  color: var(--d-dark-txt);
 }
 
-.funcKey {
-  background-color: hsl(225, 21%, 49%);
-  box-shadow: 0px 5px hsl(224, 28%, 35%);
-  color: hsl(0, 0%, 100%);
+.mainKey.light {
+  background-color: var(--l-main-key);
+  box-shadow: 0px 5px var(--l-main-sh-key);
+  color: var(--l-dark-txt);
 }
 
-.eqKey {
-  background-color: hsl(6, 63%, 50%);
-  box-shadow: 0px 5px hsl(6, 70%, 34%);
-  color: hsl(0, 0%, 100%);
+.mainKey.accent {
+  background-color: var(--a-main-key);
+  box-shadow: 0px 5px var(--a-main-sh-key);
+  color: var(--a-light-txt);
+}
+
+.funcKey.dark {
+  background-color: var(--d-func-key);
+  box-shadow: 0px 5px var(--d-func-sh-key);
+  color: var(--d-light-txt);
+}
+
+.funcKey.light {
+  background-color: var(--l-func-key);
+  box-shadow: 0px 5px var(--l-func-sh-key);
+  color: var(--l-light-txt);
+}
+
+.funcKey.accent {
+  background-color: var(--a-func-key);
+  box-shadow: 0px 5px var(--a-func-sh-key);
+  color: white;
+}
+
+.eqKey.dark {
+  background-color: var(--d-eq-key);
+  box-shadow: 0px 5px var(--d-eq-sh-key);
+  color: var(--d-light-txt);
+}
+
+.eqKey.light {
+  background-color: var(--l-eq-key);
+  box-shadow: 0px 5px var(--l-eq-sh-key);
+  color: var(--l-light-txt);
+}
+
+.eqKey.accent {
+  background-color: var(--a-eq-key);
+  box-shadow: 0px 5px var(--a-eq-sh-key);
+  color: var(--a-keypad-bg);
 }
