@@ -11,11 +11,9 @@ function App() {
   const [themeClass, setThemeClass] = useState();
 
   return (
-    <div className="App">
+    <div className="App grid place-items-center w-screen max-w-full min-h-screen">
       <ThemeContextProvider>
-        <div
-          className={`flex flex-col font-league gap-4 h-screen py-4 px-8 w-screen`}
-        >
+        <div className="flex flex-col font-league gap-4 py-4 px-8 sm:w-2/3 md:w-1/2 lg:w-1/3">
           <Header />
           <div>
             <CalculatorContainer />
