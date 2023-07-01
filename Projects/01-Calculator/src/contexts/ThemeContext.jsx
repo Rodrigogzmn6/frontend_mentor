@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const ThemeContext = React.createContext([]);
 
 function ThemeContextProvider({ children }) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   function changeTheme(newTheme) {
     setTheme(newTheme);

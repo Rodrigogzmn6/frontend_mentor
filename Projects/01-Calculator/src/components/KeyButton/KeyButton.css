@@ -4,10 +4,18 @@
   color: var(--d-dark-txt);
 }
 
+.mainKey.dark.clicked {
+  background-color: var(--d-main-sh-key);
+}
+
 .mainKey.light {
   background-color: var(--l-main-key);
   box-shadow: 0px 5px var(--l-main-sh-key);
   color: var(--l-dark-txt);
+}
+
+.mainKey.light.clicked {
+  background-color: var(--l-main-sh-key);
 }
 
 .mainKey.accent {
@@ -16,10 +24,18 @@
   color: var(--a-light-txt);
 }
 
+.mainKey.accent.clicked {
+  background-color: var(--a-main-sh-key);
+}
+
 .funcKey.dark {
   background-color: var(--d-func-key);
   box-shadow: 0px 5px var(--d-func-sh-key);
   color: var(--d-light-txt);
+}
+
+.funcKey.dark.clicked {
+  background-color: var(--d-func-sh-key);
 }
 
 .funcKey.light {
@@ -28,10 +44,18 @@
   color: var(--l-light-txt);
 }
 
+.funcKey.light.clicked {
+  background-color: var(--l-func-sh-key);
+}
+
 .funcKey.accent {
   background-color: var(--a-func-key);
   box-shadow: 0px 5px var(--a-func-sh-key);
   color: white;
+}
+
+.funcKey.accent.clicked {
+  background-color: var(--a-func-sh-key);
 }
 
 .eqKey.dark {
@@ -40,14 +64,26 @@
   color: var(--d-light-txt);
 }
 
+.eqKey.dark.clicked {
+  background-color: var(--d-eq-sh-key);
+}
+
 .eqKey.light {
   background-color: var(--l-eq-key);
   box-shadow: 0px 5px var(--l-eq-sh-key);
   color: var(--l-light-txt);
 }
 
+.eqKey.light.clicked {
+  background-color: var(--l-eq-sh-key);
+}
+
 .eqKey.accent {
   background-color: var(--a-eq-key);
   box-shadow: 0px 5px var(--a-eq-sh-key);
   color: var(--a-keypad-bg);
+}
+
+.eqKey.accent.clicked {
+  background-color: var(--a-eq-sh-key);
 }
