@@ -1,0 +1,7 @@
+.footer.dark {
+  color: var(--d-todo-font-checked);
+}
+
+.footer.light {
+  color: var(--l-todo-font-checked);
+}

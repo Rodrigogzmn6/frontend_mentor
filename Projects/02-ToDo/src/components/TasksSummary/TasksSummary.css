@@ -1,0 +1,15 @@
+.tasks-summary.dark {
+  color: var(--d-todo-font-checked);
+}
+
+.tasks-summary.light {
+  color: var(--l-todo-font-checked);
+}
+
+.tasks-summary.dark button:hover {
+  color: var(--d-todo-font-hover)
+}
+
+.tasks-summary.light button:hover {
+  color: var(--l-todo-font-hover)
+}

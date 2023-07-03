@@ -1,0 +1,9 @@
+.new-task.dark {
+  background-color: var(--d-todo-bg);
+  color: var(--d-todo-font-checked);
+}
+
+.new-task.light {
+  background-color: var(--l-todo-bg);
+  color: var(--l-todo-font-checked);
+}

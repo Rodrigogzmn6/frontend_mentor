@@ -1,0 +1,23 @@
+.application.dark {
+  background-color: var(--d-main-bg);
+  background-image: url('../../assets/bg-mobile-dark.jpg');
+  background-repeat: no-repeat;
+  color: var(--d-todo-font);
+}
+
+.application.light {
+  background-color: var(--l-main-bg);
+  background-image: url('../../assets/bg-mobile-light.jpg');
+  background-repeat: no-repeat;
+  color: var(--l-todo-font);
+}
+
+@media screen and (min-width: 640px) {
+  .application.dark {
+    background-image: url('../../assets/bg-desktop-dark.jpg');
+  }
+
+  .application.light {
+    background-image: url('../../assets/bg-desktop-light.jpg');
+  }
+}

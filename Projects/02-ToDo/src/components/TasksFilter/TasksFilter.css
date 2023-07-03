@@ -1,0 +1,33 @@
+.task-filter.dark {
+  background-color: var(--d-todo-bg);
+  color: var(--d-todo-font);
+}
+
+.task-filter.dark .filter.inactive {
+  color: var(--d-todo-font-checked)
+}
+
+.task-filter.dark .filter.inactive:hover {
+  color: var(--d-todo-font-hover)
+}
+
+.task-filter.light {
+  background-color: var(--l-todo-bg);
+  color: var(--l-todo-font);
+}
+
+.task-filter.light .filter.inactive {
+  color: var(--l-todo-font-checked)
+}
+
+.task-filter.light .filter.inactive:hover {
+  color: var(--l-todo-font-hover)
+}
+
+.filter.active {
+  color: hsl(220, 98%, 61%);
+}
+
+.filter.inactive {
+  color: var(--)
+}

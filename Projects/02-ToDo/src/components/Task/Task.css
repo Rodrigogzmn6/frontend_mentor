@@ -1,0 +1,23 @@
+.task.dark {
+  border-color: var(--d-todo-font-checked);
+}
+
+.task.dark.checked p {
+  color: var(--d-todo-font-checked);
+}
+
+.task.light {
+  border-color: var(--l-todo-font-checked);
+}
+
+.task.light.checked p {
+  color: var(--l-todo-font-checked);
+}
+
+.task .cb.checked {
+  background: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.task.checked p {
+  text-decoration: line-through;
+}

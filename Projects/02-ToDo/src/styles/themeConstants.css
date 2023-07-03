@@ -1,0 +1,15 @@
+:root {
+  /* Dark Theme Colors */
+  --d-main-bg: hsl(235, 21%, 11%);
+  --d-todo-bg: hsl(235, 24%, 19%);
+  --d-todo-font: hsl(234, 39%, 85%);
+  --d-todo-font-hover: hsl(236, 33%, 92%);
+  --d-todo-font-checked: hsl(234, 11%, 52%);
+
+  /* Light Theme Colors */
+  --l-main-bg: hsl(0, 0%, 98%);
+  --l-todo-bg: hsl(0, 0%, 100%);
+  --l-todo-font: hsl(244, 9%, 32%);
+  --l-todo-font-hover: hsl(246, 3%, 39%);
+  --l-todo-font-checked: hsl(240, 2%, 83%);
+}
