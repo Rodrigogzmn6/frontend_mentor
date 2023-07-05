@@ -8,6 +8,7 @@ export default {
         "checked-bg":
           "linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)",
         title: "hsl(0 0% 98%)",
+        "d-bg": "hsl(235, 21%, 11%)",
       },
       fontFamily: {
         josefin: "Josefin Sans, sans-serif",

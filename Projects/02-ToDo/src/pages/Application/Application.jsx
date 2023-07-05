@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { Header } from "../Header/Header";
+import { Header } from "../../components/Header/Header";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import "./Application.css";
 import { TodoContainer } from "../../containers/TodoContainer";
-import { Footer } from "../Footer/Footer";
+import { Footer } from "../../components/Footer/Footer";
 
 export const Application = () => {
   const { theme } = useContext(ThemeContext);

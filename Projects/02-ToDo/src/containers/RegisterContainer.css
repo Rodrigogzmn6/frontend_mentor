@@ -1,0 +1,9 @@
+.register-container .form-button.dark {
+  background-color: var(--d-todo-bg);
+  color: var(--d-todo-font);
+}
+
+.register-container .form-button.light {
+  background-color: var(--d-todo-font);
+  color: var(--l-todo-font);
+}

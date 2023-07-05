@@ -1,0 +1,9 @@
+.registration.dark {
+  background-color: var(--d-main-bg);
+  color: var(--d-todo-font);
+}
+
+.registration.light {
+  background-color: var(--l-main-bg);
+  color: var(--l-todo-font);
+}

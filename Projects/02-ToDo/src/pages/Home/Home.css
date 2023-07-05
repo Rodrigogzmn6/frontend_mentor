@@ -1,0 +1,9 @@
+.home.dark {
+  background-color: var(--d-main-bg);
+  color: var(--d-todo-font);
+}
+
+.home.light {
+  background-color: var(--l-main-bg);
+  color: var(--l-todo-font);
+}

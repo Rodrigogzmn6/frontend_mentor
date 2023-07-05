@@ -1,0 +1,9 @@
+.user-button.dark {
+  background-color: var(--d-todo-bg);
+  color: var(--d-todo-font);
+}
+
+.user-button.light {
+  background-color: var(--d-todo-font);
+  color: var(--l-todo-font);
+}
