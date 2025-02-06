@@ -1,10 +1,10 @@
 import "./styles/themeConstants.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeContextProvider } from "./contexts/ThemeContext";
+import { TasksContextProvider } from "./contexts/TasksContext";
 import { Application } from "./pages/Application/Application";
 import { Home } from "./pages/Home/Home";
-import { Registration } from "./pages/Registration/Registration";
-import { Login } from "./pages/Login/Login";
+import { LogReg } from "./pages/LogReg/LogReg";
 import { Header } from "./components/Header/Header";
 
 function App() {
@@ -14,10 +14,24 @@ function App() {
         <Header />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/registration" element={<Registration />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/todo" element={<Application />} />
+            <Route
+              path="/"
+              element={
+                <TasksContextProvider>
+                  <Home />
+                </TasksContextProvider>
+              }
+            />
+            <Route path="/login" element={<LogReg isLogin={true} />} />
+            <Route path="/register" element={<LogReg isLogin={false} />} />
+            <Route
+              path="/tasks"
+              element={
+                <TasksContextProvider>
+                  <Application />
+                </TasksContextProvider>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </ThemeContextProvider>

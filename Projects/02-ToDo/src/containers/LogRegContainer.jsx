@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./RegisterContainer.css";
+import "./LogRegContainer.css";
 import axios from "axios";
 import { ThemeContext } from "../contexts/ThemeContext";
 
-export const RegisterContainer = () => {
+export const LogRegContainer = ({ isLogin }) => {
   const { theme } = useContext(ThemeContext);
   const navigateTo = useNavigate();
   const [username, setUsername] = useState("");
@@ -13,12 +13,23 @@ export const RegisterContainer = () => {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(`intentando: ${username} y ${password}`);
-      const response = await axios.post("/api/register", {
-        username,
-        password,
-      });
-      console.log(response.data);
+      if (isLogin) {
+        const response = await axios.post("/api/login", {
+          username,
+          password,
+        });
+        const { accessToken, user } = response.data;
+
+        localStorage.setItem("token", accessToken);
+        localStorage.setItem("user", JSON.stringify(user));
+        navigateTo("/tasks");
+      } else {
+        await axios.post("/api/register", {
+          username,
+          password,
+        });
+        navigateTo("/login");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -38,12 +49,14 @@ export const RegisterContainer = () => {
 
   return (
     <div
-      className={`register-container ${theme} flex flex-col flex-grow gap-4 items-center sm:gap-8`}
+      className={`logreg-container ${theme} flex flex-col flex-grow gap-4 items-center sm:gap-8`}
     >
-      <h2 className="text-2xl sm:text-3xl lg:text-3xl">Registration</h2>
+      <h2 className="text-2xl sm:text-3xl lg:text-3xl">
+        {isLogin ? "Login" : "Register"}
+      </h2>
       <form className="flex flex-col gap-4">
         <input
-          type="text"
+          type="email"
           placeholder="Username"
           value={username}
           onChange={handleUserOnChange}
@@ -69,7 +82,7 @@ export const RegisterContainer = () => {
             type="button"
             onClick={handleOnSubmit}
           >
-            Register
+            {isLogin ? "Login" : "Register"}
           </button>
         </div>
       </form>

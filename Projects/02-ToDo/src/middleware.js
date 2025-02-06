@@ -3,8 +3,12 @@ import jwt from "jsonwebtoken";
 // Access token verification Middleware
 export const authenticateToken = (req, res, next) => {
   try {
-    const token = req.headers.authorization;
-
+    let token = null;
+    if (req.method === "GET") {
+      token = req.headers.authorization;
+    } else {
+      token = req.body.headers.authorization;
+    }
     if (!token) {
       return res
         .status(401)

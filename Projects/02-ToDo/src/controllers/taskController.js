@@ -4,14 +4,19 @@ import { User } from "../models/userModel.js";
 export const createTask = async (req, res) => {
   console.log(req.body);
   try {
-    const { title, description } = req.body;
+    const { completed, description } = req.body.task;
 
     // Create new task asociated to current user
-    const newTask = new Task({ title, description, user: req.userId });
+    const newTask = new Task({
+      completed,
+      description,
+      user: req.body.userId,
+    });
     await newTask.save();
-
+    console.log("nueva tarea: " + newTask);
     // Add task to current user
-    const user = await User.findById(req.userId);
+    const user = await User.findById(req.body.userId);
+    console.log("usuario: " + user);
     user.tasks.push(newTask);
     await user.save();
 
@@ -23,12 +28,11 @@ export const createTask = async (req, res) => {
 };
 
 export const getTasks = async (req, res) => {
-  console.log(req.body);
   try {
     // Get all user's tasks
-    const user = await User.findById(req.userId).populate("tasks");
+    const user = await User.findById(req.query.userId).populate("tasks");
     const tasks = user.tasks;
-
+    // console.log(user);
     res.status(200).json(tasks);
   } catch (error) {
     console.error(`Error getting tasks: ${error}`);

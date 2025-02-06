@@ -10,20 +10,20 @@ export const Task = ({ task }) => {
   return (
     <div
       className={`task ${theme} border-b flex items-center justify-between py-4 px-6 ${
-        task.checked ? "checked" : ""
+        task.completed ? "completed" : ""
       }`}
     >
       <div className="flex gap-4 items-center">
         <div
           className={`cb border grid place-items-center h-6 rounded-full shrink-0 w-6 ${
-            task.checked ? "checked" : ""
+            task.completed ? "completed" : ""
           }`}
         >
-          {task.checked ? <img src={CheckIcon} /> : <div></div>}
+          {task.completed ? <img src={CheckIcon} /> : <div></div>}
         </div>
-        <p>{task.text}</p>
+        <p>{task.description}</p>
       </div>
-      <img src={CrossIcon} />
+      <img src={CrossIcon} onClick={}/>
     </div>
   );
 };

@@ -47,10 +47,22 @@ export const loginUser = async (req, res) => {
     }
 
     //Generate access token
-    const accessToken = jwt.sign({ userId: username._id }, "secretKey");
+    const accessToken = jwt.sign({ userId: username._id }, "secretKey", {
+      expiresIn: "1h",
+    });
 
-    res.status(200).json({ accessToken });
+    res.status(200).json({ accessToken, user: existingUser });
   } catch (error) {
     res.status(500).json({ message: "Server error" });
+  }
+};
+
+export const getUsers = async (req, res) => {
+  try {
+    const users = await User.find();
+    res.status(200).json(users);
+  } catch (error) {
+    console.error("Error al obtener los usuarios", error);
+    res.status(500).json({ message: "Ha ocurrido un error en el servidor" });
   }
 };

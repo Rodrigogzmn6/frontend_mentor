@@ -2,7 +2,11 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import { loginUser, registerUser } from "./controllers/userController.js";
+import {
+  loginUser,
+  registerUser,
+  getUsers,
+} from "./controllers/userController.js";
 import {
   createTask,
   getTasks,
@@ -20,13 +24,18 @@ app.use(
     origin: "http://localhost:5173",
   })
 );
-app.use(authenticateToken);
 
-//Authentication and users routes
+// Public routes (Without authorization token)
 app.post("/login", loginUser);
 app.post("/register", registerUser);
+app.get("/usuarios", getUsers);
+
+// Authentication middleware for protected routes
+app.use(authenticateToken);
+
+// Private routes (With authorization token)
+app.get("/", getTasks);
 app.post("/tasks", createTask);
-app.get("/tasks", getTasks);
 app.put("/tasks/:id", updateTask);
 app.delete("/tasks/:id", deleteTask);
 

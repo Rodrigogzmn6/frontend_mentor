@@ -4,10 +4,11 @@ import { TasksList } from "../components/TasksList/TasksList";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { TasksFilter } from "../components/TasksFilter/TasksFilter";
 import { TasksContext } from "../contexts/TasksContext";
+import { Footer } from "../components/Footer/Footer";
 
-export const TodoContainer = () => {
+export const HomeContainer = () => {
   const { theme } = useContext(ThemeContext);
-  const { tasks, fetchTasks, createTask } = useContext(TasksContext);
+  const { tasks, fetchTasks } = useContext(TasksContext);
 
   useEffect(() => {
     fetchTasks();
@@ -15,9 +16,10 @@ export const TodoContainer = () => {
 
   return (
     <div className="grid gap-4">
-      <NewTask createTask={createTask} />
+      <NewTask />
       <TasksList />
       <TasksFilter />
+      <Footer />
     </div>
   );
 };
